@@ -23,5 +23,20 @@ public class Main {
             System.out.print(stack.top()+" ");
             stack.pop();
         }
+
+        System.out.println("\n");
+
+        BoundedStack<Integer> boundedStack = new BoundedStack<Integer>(5);
+        boundedStack.push(1).push(2).push(3).push(4).push(5);
+
+        System.out.println("BoundedStack elements are:");
+        while (!boundedStack.isEmpty()) {
+            System.out.print(boundedStack.top()+" ");
+            boundedStack.pop();
+        }
+
+        System.out.println("\n");
+
+
     }
 }
