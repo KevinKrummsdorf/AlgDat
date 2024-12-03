@@ -37,6 +37,13 @@ public class Main {
 
         System.out.println("\n");
 
+        BoundedQueue<Integer> boundedQueue = new BoundedQueue<Integer>(5);
+        boundedQueue.enqueue(1).enqueue(2).enqueue(3).enqueue(4).enqueue(5);
 
+        System.out.println("BoundedQueue elements are:");
+        while (!boundedQueue.isEmpty()) {
+            System.out.print(boundedQueue.front()+" ");
+            boundedQueue.dequeue();
+        }
     }
 }
